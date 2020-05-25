@@ -33,5 +33,3 @@ ENV GROCY_DATA_DIST_DIR /var/cache/grocy-data-dist
 
 ADD docker-entrypoint.d/ /run/docker-entrypoint.d/
 ADD docker-websites.d/ /run/docker-websites.d/
-
-HEALTHCHECK CMD killall -0 run-parts || curl -f http://localhost/index.php || exit 1
